@@ -60,6 +60,7 @@ int parse_command(char *str, char *argv[]){
 }
 
 void ls_command(int n, char *argv[]){
+//search every note in filesystem
 
 }
 
@@ -145,6 +146,9 @@ void test_command(int n, char *argv[]) {
     int error;
 
     fio_printf(1, "\r\n");
+
+    //mkdir in host
+    handle = host_action(SYS_SYSTEM, "mkdir output");
 
     handle = host_action(SYS_OPEN, "output/syslog", 8);
     if(handle == -1) {
