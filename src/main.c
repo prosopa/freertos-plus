@@ -94,9 +94,9 @@ void command_prompt(void *pvParameters)
 	fio_printf(1, "\rWelcome to FreeRTOS Shell\r\n");
 	while(1){
                 fio_printf(1, "%s", hint);
-		fio_read(0, buf, 127);
+		fio_read(0, buf, 127); //set breakpoint in this row
 	
-		int n=parse_command(buf, argv);
+		int n=parse_command(buf, argv);  //and jump to here
 
 		/* will return pointer to the command function */
 		cmdfunc *fptr=do_command(argv[0]);

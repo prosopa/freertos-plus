@@ -4,3 +4,11 @@ target remote :3333
 b main
 
 c
+
+b 97
+
+c
+
+set var buf = "test"
+j 99
+c
